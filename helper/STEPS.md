@@ -143,3 +143,7 @@ Setup the Backend
 
 
 ## 7. Create the entities
+
+  - Create a *base* entity to *facilitate* the entities creation. 
+  
+    - The *base* entity will be used as an *extension* by the *other* classes
