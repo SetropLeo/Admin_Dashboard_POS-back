@@ -157,18 +157,14 @@ Setup the Backend
 
 ## 9. Generate Migrations to insert Entities in the Database as Tables
 
-  - Run the following command in the terminal: 
-
-    *TO GENERATE*
-
+  *TO GENERATE*
     - "migration:generate": "typeorm-ts-node-esm migration:generate -d ./src/database/data-source.ts ./src/database/migrations/*migrationName*"
+
+  *TO INSERT IN THE DATABASE*
+    "migration:run": "typeorm-ts-node-esm migration:run -d ./src/database/data-source.ts"
+
+  *TO REVERT*
     - "migration:revert": "typeorm-ts-node-esm migration:revert -d ./src/database/data-source.ts ./src/database/migrations/*migrationName*"
-
-
-    *TO INSERT IN THE DATABASE*
-    - npx typeorm-ts-node-esm migration:run
-
-
 
 
 
