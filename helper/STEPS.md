@@ -48,10 +48,9 @@ Setup the Backend
       - Used to install UUID typings 
 
 
-      **TYPEORM**
-  - "npm install typeorm" 
-      - Used to encapsulate the code needed to manipulate the data
-      - Interact directly with an object in the same language you're using instead of SQL
+      **REFLECT-METADATA**
+  - "npm install reflect-metadata" 
+      - IDK what it does
 
 
       **TYPESCRIPT**
@@ -146,4 +145,41 @@ Setup the Backend
 
   - Create a *base* entity to *facilitate* the entities creation. 
   
-    - The *base* entity will be used as an *extension* by the *other* classes
+    - The *base* entity will be used as an *extension* for the *other* entity classes
+
+
+## 8. Create the models
+
+  - Create a *base* model to *facilitate* the models creation. 
+  
+    - The *base* model will be used as an *extension* for the *other* model classes
+
+
+## 9. Generate Migrations to insert Entities in the Database as Tables
+
+  - Run the following command in the terminal: 
+
+    *TO GENERATE*
+
+    - "migration:generate": "typeorm-ts-node-esm migration:generate -d ./src/database/data-source.ts ./src/database/migrations/*migrationName*"
+    - "migration:revert": "typeorm-ts-node-esm migration:revert -d ./src/database/data-source.ts ./src/database/migrations/*migrationName*"
+
+
+    *TO INSERT IN THE DATABASE*
+    - npx typeorm-ts-node-esm migration:run
+
+
+
+
+
+
+# HELPERS (BEGINNERS PLEASE DON'T USE IT)
+
+  - To create a new project using CLI, run the following command:
+
+    - npx typeorm init --name MyProject --database postgres
+
+  
+  - To Create a new entity using an existent model: 
+
+      - typeorm entity:create -n User -d src/user/entity
