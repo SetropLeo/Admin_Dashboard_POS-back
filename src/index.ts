@@ -1,4 +1,5 @@
-import { AppDataSource } from "./database/data-source";
+import "reflect-metadata"
+import { AppDataSource } from "./data-source";
 import { User } from "./entities/User";
 
 AppDataSource.initialize()
