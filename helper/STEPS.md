@@ -179,3 +179,7 @@ Setup the Backend
   - To Create a new entity using an existent model: 
 
       - typeorm entity:create -n User -d src/user/entity
+
+  - You need to start the AppDataSource
+
+    - Server.ts -> AppDataSource.initialize();
